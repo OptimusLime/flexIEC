@@ -1,0 +1,25 @@
+{
+  "name": "flexIEC",
+  "repo": "https://github.com/OptimusLime/flexIEC.git",
+  "description": "UI for Interactive Evolutionary Computation. Callbacks and hooks for loading in new individuals in whatever domain being drawn in HTML. Note that while the UI might be in HTML, the domain may be simulated in native code. See WIN for more details.",
+  "version": "0.0.1",
+  "keywords": ["flexbox", "flex", "IEC", "evolution", "iec"],
+  "dependencies": {
+    "nolimits4web/swiper" : "*",
+    "OptimusLime/flexforever" : "*",
+    "component/emitter" : "*"
+  },
+  "scripts": [
+    "main.js",
+    "js/modernizr.js"
+  ],
+  "main": "main.js",
+  "styles": [
+    "css/flex-grid.css",
+    "css/main.css"
+  ],
+  "images" : [
+    "images/loading.gif"
+  ],
+  "license": ["MIT"]
+}

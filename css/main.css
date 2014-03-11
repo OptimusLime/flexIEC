@@ -1,0 +1,112 @@
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+.loading {
+    background-image: url('../images/loading.gif'); 
+    background-repeat: no-repeat; 
+	background-position:center; 
+}
+.special
+{
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+}
+.special .swiper-container
+{
+	-webkit-flex: 1 1 auto;
+}
+.fullWH 
+{
+	width: 100%;
+	height: 100%;
+}
+
+.border
+{
+	border: 1px solid black;
+}
+
+.parent-cell
+{
+  display: flex;
+}
+.colObject
+{
+	display: -webkit-flex;
+    -webkit-flex-direction: column;
+    height: 100%;
+}
+.innerObject
+{
+	-webkit-flex: 1 1 auto;
+    overflow-y: auto;
+    min-height: 0px;
+}
+/*.swiper-container 
+{
+	height: 100%;
+}*/
+#flexIEC 
+{
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.containerOR
+{
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.rowOR
+{
+	margin-right: 0;
+	margin-left: 0;
+}
+
+html
+{
+	height:100%;
+}
+body
+{
+	margin:0;
+	line-height:1.5; 
+	position:relative;
+	height:100%;
+}
+
+.swiper-container
+{
+	width:100%;
+	height:100%;
+	text-align:center;
+}
+
+.swiper-slide
+{
+	font-size:42px; 
+	margin-bottom:0;
+	line-height:45px;
+}
+
+.flexvcenter {
+	display: -webkit-flex;
+	-webkit-flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	/*display: flex;*/
+	align-items: center;
+	justify-content: center;
+}
+
+.grid-cell {
+  flex: 1;
+  align-self: center;
+}

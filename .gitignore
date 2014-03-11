@@ -1,0 +1,20 @@
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+#component ignore
+build
+components
+
+#node ignore folders
+npm-debug.log
+node_modules
