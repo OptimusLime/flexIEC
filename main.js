@@ -18,14 +18,20 @@ var removeChildren = function(div)
 	}
 }
 
-var createDiv = function(id, classes)
+var createDiv = function(id, classes, type, inner)
 {
-	var element = document.createElement('div');
+	if(!type)
+		type = 'div';
+
+	var element = document.createElement(type);
 
 	//set our ID
 	element.id = id;
 	
 	element.className = classes;
+
+	if(inner)
+		element.innerHTML = inner;
 
 	return element;
 }
@@ -95,13 +101,38 @@ function flexIEC(divValue, reqOptions)
 	//append both top and bottom to our children
 	parentColumn.appendChild(parentTopRow);
 	parentColumn.appendChild(parentBottomRow);
-
 	//add parent to the second row
 	// leftParentRow.appendChild(parentColumn);
 	
 
-	var rightColumn = createDiv("evo-col", "col-auto fullWH border")
+	var rightColumn = createDiv("evo-col", "col-auto fullWH colObject border")
 
+	// var evoTopColumn = createDiv("p-top", "");
+
+	// var choice = createDiv("p-top-choice", "border");
+	// choice.innerHTML = "Parent Artifacts";
+	var tabs = createDiv("evoTabs", "tabs row");
+	
+	var aRef = createDiv("", "active col-auto border", "a", "Tab 1");
+	aRef.href = "#";
+	tabs.appendChild(aRef);
+	
+	aRef = createDiv("", "col-auto border", "a", "Tab 2");
+	aRef.href = "#";
+	tabs.appendChild(aRef);
+
+	aRef = createDiv("", "col-auto border", "a", "Tab 3");
+	aRef.href = "#";
+	tabs.appendChild(aRef);
+
+	var evoBottom = createDiv("evo-bot", "innerObject colObject");
+	var innerEvo = createDiv("evo-inner", "innerObject special");
+	evoBottom.appendChild(innerEvo);
+
+	rightColumn.appendChild(tabs);
+	rightColumn.appendChild(evoBottom);
+
+	//<div class="tabs"> <a href="#" class="active">Tab 1</a> <a href="#" style="margin:0 17px">Tab 2</a> <a href="#">Tab 3</a> </div>
 
 	//append both children
 	row.appendChild(parentColumn);
@@ -111,8 +142,6 @@ function flexIEC(divValue, reqOptions)
 
 	//then pull in the full containers
 	divValue.appendChild(container);
-
-
 
 	self.addFlexToPage = function(divToAppend, addOptions)
 	{
@@ -150,7 +179,7 @@ function flexIEC(divValue, reqOptions)
 
 	// self.addFlexToPage(parentColumn, {mode: 'vertical'});
 	self.addFlexToPage(innerParent, {mode: 'vertical'});
-	self.addFlexToPage(rightColumn);
+	self.addFlexToPage(innerEvo);
 
 
 
