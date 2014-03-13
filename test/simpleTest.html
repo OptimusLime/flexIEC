@@ -34,7 +34,30 @@
 
 			};
 
-			var nf = flex(div, flexOptions);
+			var nf = flex();
+
+			//add in our callbacks now, lest we be passed up later
+			nf.on('createIndividual', function(flexName, eID, eDiv, finished)
+			{
+				//let it know we're done!
+				setTimeout(function()
+				{
+					eDiv.innerHTML = "done";
+					finished(eID, eDiv);
+				}, Math.floor(250 + Math.random()*3000));
+			});
+
+			nf.on('visibleIndividual', function(eID, eDiv)
+			{
+				eDiv.innerHTML = "shown";
+			});
+
+			nf.on('hiddenIndividual', function(eID, eDiv)
+			{
+				eDiv.innerHTML = "hidden";
+			});
+
+			nf.injectIEC(div, flexOptions); 
 
 
 			//when an object is created, we are informed, and have the option to add our information 

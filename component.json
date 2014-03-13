@@ -7,7 +7,9 @@
   "dependencies": {
     "nolimits4web/swiper" : "*",
     "OptimusLime/flexforever" : "*",
-    "component/emitter" : "*"
+    "component/emitter" : "*",
+    "component/classes" : "*",
+    "component/events" : "*"
   },
   "scripts": [
     "main.js",

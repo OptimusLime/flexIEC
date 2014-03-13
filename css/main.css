@@ -44,6 +44,10 @@
     overflow-y: auto;
     min-height: 0px;
 }
+.like
+{
+	border: 1px solid red;
+}
 /*.swiper-container 
 {
 	height: 100%;
@@ -59,13 +63,13 @@
     justify-content: center;
     text-align: center;
 }
-.containerOR
+.pOR
 {
 	padding-right: 0;
 	padding-left: 0;
 }
 
-.rowOR
+.mOR
 {
 	margin-right: 0;
 	margin-left: 0;
