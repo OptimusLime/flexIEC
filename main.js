@@ -160,15 +160,15 @@ function flexIEC()//divValue, reqOptions)
 		// choice.innerHTML = "Parent Artifacts";
 		var tabs = createDiv("evoTabs", "tabs row mOR");
 		
-		var aRef = createDiv("", "active col-auto border", "a", "Tab 1");
+		var aRef = createDiv("", "active col-auto border", "a", "IEC");
 		aRef.href = "#";
 		tabs.appendChild(aRef);
 		
-		aRef = createDiv("", "col-auto border", "a", "Tab 2");
+		aRef = createDiv("", "col-auto border", "a", "Novelty");
 		aRef.href = "#";
 		tabs.appendChild(aRef);
 
-		aRef = createDiv("", "col-auto border", "a", "Tab 3");
+		aRef = createDiv("", "col-auto border", "a", "Fitness");
 		aRef.href = "#";
 		tabs.appendChild(aRef);   
 
